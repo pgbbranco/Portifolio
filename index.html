@@ -13,24 +13,26 @@
         }
 
         body {
-            background-color: #0d0f12;
             color: #ffffff;
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
         }
 
-        /* PAISAGEM DE FUNDO DESFOCADA */
+        /* Fundo com Paisagem Desfocada */
         .landscape-bg {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(13, 15, 18, 0.6), rgba(13, 15, 18, 0.8)),
-                        url('https://images.unsplash.com/photo-1511497584788-8767611136f6?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
-            filter: blur(10px); /* Efeito desfocado da imagem */
-            transform: scale(1.08); /* Evita bordas brancas por causa do blur */
+            width: 100vw;
+            height: 100vh;
+            background-color: #0d0f12;
+            background-image: linear-gradient(rgba(13, 15, 18, 0.55), rgba(13, 15, 18, 0.8)),
+                              url('https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            transform: scale(1.1);
             z-index: -2;
         }
 
@@ -45,21 +47,21 @@
             pointer-events: none;
         }
 
-        /* Relâmpago */
+        /* Flash do Relâmpago */
         .lightning-flash {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.2);
             opacity: 0;
             pointer-events: none;
             z-index: 0;
             transition: opacity 0.05s ease-out;
         }
 
-        /* Container do Conteúdo */
+        /* Container Principal */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -311,7 +313,7 @@
 </head>
 <body>
 
-    <!-- Fundo de Paisagem com Blur -->
+    <!-- Fundo de Paisagem Sombria Desfocada -->
     <div class="landscape-bg"></div>
 
     <!-- Canvas da Chuva -->
