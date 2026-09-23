@@ -33,8 +33,8 @@
       --card-text-muted: #6B5B50;
       
       /* Cores de Destaque */
-      --accent: #D9481C;          /* Terracota Queimado */
-      --accent-secondary: #8B5E3C;/* Café Quente */
+      --accent: #D9481C;
+      --accent-secondary: #8B5E3C;
       --accent-hover: #B53610;
     }
 
@@ -70,10 +70,19 @@
     .bg__scrim { 
       position: absolute; 
       inset: 0; 
-      background: linear-gradient(180deg, rgba(245, 239, 230, 0.6) 0%, rgba(245, 239, 230, 0.95) 100%); 
+      background: linear-gradient(
+        180deg, 
+        rgba(245, 239, 230, 0.6) 0%, 
+        rgba(245, 239, 230, 0.95) 100%
+      ); 
     }
 
-    canvas#rain-canvas { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+    canvas#rain-canvas { 
+      position: absolute; 
+      inset: 0; 
+      z-index: 1; 
+      pointer-events: none; 
+    }
 
     .lightning-overlay { 
       position: fixed; 
@@ -81,7 +90,11 @@
       left: 0; 
       width: 100%; 
       height: 60vh; 
-      background: radial-gradient(circle at top, rgba(217, 72, 28, 0.15) 0%, transparent 70%); 
+      background: radial-gradient(
+        circle at top, 
+        rgba(217, 72, 28, 0.15) 0%, 
+        transparent 70%
+      ); 
       opacity: 0; 
       z-index: 2; 
       pointer-events: none; 
@@ -117,7 +130,10 @@
       transition: transform 0.2s, background 0.2s; 
     }
 
-    .flag-btn:hover { transform: translateY(3px); background: var(--accent-hover); }
+    .flag-btn:hover { 
+      transform: translateY(3px); 
+      background: var(--accent-hover); 
+    }
     
     .dropdown-panel { 
       background: var(--panel-bg); 
@@ -140,7 +156,11 @@
       box-shadow: 0 15px 35px rgba(43, 33, 26, 0.1); 
     }
 
-    .action-buttons { display: flex; flex-direction: column; gap: 8px; }
+    .action-buttons { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+    }
 
     .control-btn { 
       background: var(--bg-light); 
@@ -157,7 +177,10 @@
       gap: 8px; 
     }
 
-    .control-btn:hover { background: #EFE6D8; border-color: var(--accent); }
+    .control-btn:hover { 
+      background: #EFE6D8; 
+      border-color: var(--accent); 
+    }
 
     /* Player de Música */
     .music-widget { 
@@ -171,7 +194,9 @@
       transition: border-color 0.3s; 
     }
 
-    .music-widget.active { border-color: var(--accent); }
+    .music-widget.active { 
+      border-color: var(--accent); 
+    }
 
     .music-widget img { 
       width: 44px; 
@@ -180,12 +205,22 @@
       object-fit: cover; 
       animation: spin 4s linear infinite; 
       animation-play-state: paused; 
-      -webkit-mask-image: radial-gradient(circle at center, transparent 15%, black 16%); 
-      mask-image: radial-gradient(circle at center, transparent 15%, black 16%); 
+      -webkit-mask-image: radial-gradient(
+        circle at center, 
+        transparent 15%, 
+        black 16%
+      ); 
+      mask-image: radial-gradient(
+        circle at center, 
+        transparent 15%, 
+        black 16%
+      ); 
       border: 2px solid var(--card-border); 
     }
 
-    .music-widget.active img { animation-play-state: running; }
+    .music-widget.active img { 
+      animation-play-state: running; 
+    }
 
     .music-info { 
       display: flex; 
@@ -237,7 +272,9 @@
       animation: fadeIn 1s ease-out; 
     }
 
-    .header-text { flex: 1; }
+    .header-text { 
+      flex: 1; 
+    }
     
     header h1 { 
       font-family: var(--font-title);
@@ -260,7 +297,10 @@
       letter-spacing: -0.2px; 
     }
     
-    .avatar-container { flex-shrink: 0; position: relative; }
+    .avatar-container { 
+      flex-shrink: 0; 
+      position: relative; 
+    }
     
     .avatar { 
       width: 170px; 
@@ -302,16 +342,29 @@
       color: var(--text-main); 
     }
 
-    .highlight { color: var(--accent); font-weight: 700; }
+    .highlight { 
+      color: var(--accent); 
+      font-weight: 700; 
+    }
 
     /* Linha do Tempo */
-    .timeline { position: relative; max-width: 100%; margin: 0 auto; }
+    .timeline { 
+      position: relative; 
+      max-width: 100%; 
+      margin: 0 auto; 
+    }
 
     .timeline::after { 
       content: ''; 
       position: absolute; 
       width: 2px; 
-      background: linear-gradient(to bottom, transparent, var(--card-border) 10%, var(--card-border) 90%, transparent); 
+      background: linear-gradient(
+        to bottom, 
+        transparent, 
+        var(--card-border) 10%, 
+        var(--card-border) 90%, 
+        transparent
+      ); 
       top: 0; 
       bottom: 0; 
       left: 50%; 
@@ -325,8 +378,15 @@
       margin-bottom: 20px; 
     }
 
-    .timeline-item.left { left: 0; text-align: right; }
-    .timeline-item.right { left: 50%; text-align: left; }
+    .timeline-item.left { 
+      left: 0; 
+      text-align: right; 
+    }
+
+    .timeline-item.right { 
+      left: 50%; 
+      text-align: left; 
+    }
 
     .timeline-dot { 
       position: absolute; 
@@ -341,8 +401,13 @@
       box-shadow: 0 0 8px rgba(217, 72, 28, 0.3); 
     }
 
-    .timeline-item.left .timeline-dot { right: -10px; }
-    .timeline-item.right .timeline-dot { left: -10px; }
+    .timeline-item.left .timeline-dot { 
+      right: -10px; 
+    }
+
+    .timeline-item.right .timeline-dot { 
+      left: -10px; 
+    }
 
     .timeline-item:hover .timeline-dot { 
       background-color: var(--text-main); 
@@ -451,22 +516,40 @@
     }
 
     @keyframes spin { 
-      100% { transform: rotate(360deg); } 
+      100% { 
+        transform: rotate(360deg); 
+      } 
     }
 
     @keyframes fadeIn { 
-      from { opacity: 0; } 
-      to { opacity: 1; } 
+      from { 
+        opacity: 0; 
+      } 
+      to { 
+        opacity: 1; 
+      } 
     }
 
     @keyframes slideUp { 
-      from { opacity: 0; transform: translateY(30px); } 
-      to { opacity: 1; transform: translateY(0); } 
+      from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+      } 
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      } 
     }
 
     @keyframes morphLiquid { 
-      0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } 
-      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: translateY(-5px); } 
+      0%, 100% { 
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+      } 
+
+      50% { 
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+        transform: translateY(-5px); 
+      } 
     }
 
     @media (max-width: 768px) {
@@ -476,9 +559,18 @@
         gap: 15px; 
       }
 
-      header h1 { font-size: 2.8rem; }
-      .avatar { width: 140px; height: 140px; }
-      .timeline::after { left: 20px; }
+      header h1 { 
+        font-size: 2.8rem; 
+      }
+
+      .avatar { 
+        width: 140px; 
+        height: 140px; 
+      }
+
+      .timeline::after { 
+        left: 20px; 
+      }
 
       .timeline-item { 
         width: 100%; 
@@ -497,7 +589,9 @@
         right: auto; 
       }
 
-      .top-flag-container { right: 15px; }
+      .top-flag-container { 
+        right: 15px; 
+      }
     }
   </style>
 </head>
@@ -556,17 +650,11 @@
       <h2>Sobre Mim</h2>
 
       <p>
-        Olá! Meu nome é Pedro Gabriel, tenho 15 anos e moro em Varginha, Minas Gerais.
-        Atualmente, sou estudante do curso técnico de Informática para Internet.
-        Sou fascinado por tecnologia, e existem três grandes pilares que definem
-        perfeitamente os meus interesses no dia a dia:
-        <span class="highlight">Jogos, Programação e Computador</span>.
+        Olá! Meu nome é Pedro Gabriel, tenho 15 anos e moro em Varginha, Minas Gerais. Atualmente, sou estudante do curso técnico de Informática para Internet. Sou fascinado por tecnologia, e existem três grandes pilares que definem perfeitamente os meus interesses no dia a dia: <span class="highlight">Jogos, Programação e Computador</span>.
       </p>
 
       <p>
-        Olhando para o meu futuro, meu grande objetivo é unir as coisas que mais amo.
-        Quero trabalhar profissionalmente com HTML e tecnologias web para desenvolver
-        sistemas incríveis, e paralelamente mergulhar de cabeça no universo da criação de jogos.
+        Olhando para o meu futuro, meu grande objetivo é unir as coisas que mais amo. Quero trabalhar profissionalmente com HTML e tecnologias web para desenvolver sistemas incríveis, e paralelamente mergulhar de cabeça no universo da criação de jogos.
       </p>
     </section>
 
@@ -583,12 +671,11 @@
             <span class="date">Entrega 01</span>
 
             <p>
-              Aprendi a expressar minha identidade visual e traduzir referências
-              estéticas na criação de uma capa gráfica exclusiva.
+              Aprendi a expressar minha identidade visual e traduzir referências estéticas na criação de uma capa gráfica exclusiva.
             </p>
 
-            <!-- ÚNICA ALTERAÇÃO: pasta da Entrega 01 -->
-            <a href="02-capa-do-album/" target="_blank">Acessar Pasta ↗</a>
+            <!-- LINK PARA A PASTA NO GITHUB -->
+            <a href="https://github.com/pgbbranco/Portifolio/tree/main/02-capa-do-album" target="_blank">Acessar Pasta ↗</a>
           </div>
         </div>
 
@@ -600,8 +687,7 @@
             <span class="date">Entrega 02</span>
 
             <p>
-              Pratiquei a organização de informações criando um painel de dados
-              pessoais focado em clareza visual e estrutura.
+              Pratiquei a organização de informações criando um painel de dados pessoais focado em clareza visual e estrutura.
             </p>
 
             <a href="#" target="_blank">Acessar Pasta ↗</a>
@@ -616,8 +702,7 @@
             <span class="date">Entrega 03</span>
 
             <p>
-              Mapeei as ramificações do mercado tech, compreendendo as trilhas
-              e os caminhos de aprendizado para a área de TI.
+              Mapeei as ramificações do mercado tech, compreendendo as trilhas e os caminhos de aprendizado para a área de TI.
             </p>
 
             <a href="#" target="_blank">Acessar Pasta ↗</a>
@@ -632,8 +717,7 @@
             <span class="date">Entrega 04</span>
 
             <p>
-              Realizei uma análise profunda sobre os valores fundamentais e as
-              motivações que guiam minhas escolhas profissionais.
+              Realizei uma análise profunda sobre os valores fundamentais e as motivações que guiam minhas escolhas profissionais.
             </p>
 
             <a href="#" target="_blank">Acessar Pasta ↗</a>
@@ -648,8 +732,7 @@
             <span class="date">Entrega 05</span>
 
             <p>
-              Consolidei meus princípios éticos, visão de futuro e objetivos
-              profissionais em um documento norteador e inspirador.
+              Consolidei meus princípios éticos, visão de futuro e objetivos profissionais em um documento norteador e inspirador.
             </p>
 
             <a href="#" target="_blank">Acessar Pasta ↗</a>
@@ -662,9 +745,7 @@
     <footer>
       <p><strong>Pedro Gabriel Bernardes Branco</strong></p>
       <p>15 anos | Varginha, MG</p>
-      <a href="https://github.com/pgbbranco" target="_blank" class="btn-github">
-        Acessar meu GitHub 🐙
-      </a>
+      <a href="https://github.com/pgbbranco" target="_blank" class="btn-github">Acessar meu GitHub 🐙</a>
     </footer>
   </div>
 
@@ -783,7 +864,7 @@
         ctx.beginPath(); 
         ctx.moveTo(d.x, d.y); 
         ctx.lineTo(
-          d.x - wind * d.length,
+          d.x - wind * d.length, 
           d.y + d.length
         );
 
@@ -799,7 +880,7 @@
 
         if (d.y > canvas.height) {
           d.y = -d.length; 
-          d.x = Math.random() * canvas.width;
+          d.x = Math.random() * canvas.width; 
         }
 
         if (d.x < -50) d.x = canvas.width + 50; 
@@ -817,7 +898,7 @@
       if (raining) { 
         btn.innerHTML = '🌧️ Pausar Chuva'; 
 
-        if (audioStarted) {
+        if (audioStarted) { 
           rainAudio.play(); 
           scheduleNextLightning(); 
         }
